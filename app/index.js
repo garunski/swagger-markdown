@@ -5,6 +5,7 @@ const fs = require('fs');
 const ArgumentParser = require('argparse').ArgumentParser;
 const transformInfo = require('./transformers/info');
 const transformPath = require('./transformers/path');
+const transformDefinition = require('./transformers/definition');
 const transformSecurityDefinitions = require('./transformers/securityDefinitions');
 const transformExternalDocs = require('./transformers/externalDocs');
 const packageInfo = require('../package.json');
@@ -56,6 +57,12 @@ if (args.input) {
     if ('paths' in inputDoc) {
       Object.keys(inputDoc.paths).map(
         path => document.push(transformPath(path, inputDoc.paths[path]))
+      );
+    }
+
+    if ('definitions' in inputDoc) {
+      Object.keys(inputDoc.definitions).map(
+        definition => document.push(transformDefinition(definition, inputDoc.definitions[definition]))
       );
     }
 

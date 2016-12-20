@@ -51,9 +51,9 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 405 | Invalid input |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 405 | Invalid input  | string |
 
 **Security**
 
@@ -74,11 +74,11 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 400 | Invalid ID supplied |
-| 404 | Pet not found |
-| 405 | Validation exception |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 400 | Invalid ID supplied  | string |
+| 404 | Pet not found  | string |
+| 405 | Validation exception  | string |
 
 **Security**
 
@@ -101,10 +101,10 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | successful operation |
-| 400 | Invalid status value |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | successful operation  | Pet[] |
+| 400 | Invalid status value  | string |
 
 **Security**
 
@@ -127,10 +127,10 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | successful operation |
-| 400 | Invalid tag value |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | successful operation  | Pet[] |
+| 400 | Invalid tag value  | string |
 
 **Security**
 
@@ -153,11 +153,11 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | successful operation |
-| 400 | Invalid ID supplied |
-| 404 | Pet not found |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | successful operation  | string |
+| 400 | Invalid ID supplied  | string |
+| 404 | Pet not found  | string |
 
 **Security**
 
@@ -181,9 +181,9 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 405 | Invalid input |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 405 | Invalid input  | string |
 
 **Security**
 
@@ -205,9 +205,9 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 400 | Invalid pet value |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 400 | Invalid pet value  | string |
 
 **Security**
 
@@ -230,10 +230,10 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | successful operation |
-| 400 | Invalid Order |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | successful operation  | string |
+| 400 | Invalid Order  | string |
 
 ### /stores/order/{orderId}
 ---
@@ -250,11 +250,11 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | successful operation |
-| 400 | Invalid ID supplied |
-| 404 | Order not found |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | successful operation  | string |
+| 400 | Invalid ID supplied  | string |
+| 404 | Order not found  | string |
 
 ##### ***DELETE***
 **Summary:** Delete purchase order by ID
@@ -269,10 +269,10 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 400 | Invalid ID supplied |
-| 404 | Order not found |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 400 | Invalid ID supplied  | string |
+| 404 | Order not found  | string |
 
 ### /users
 ---
@@ -289,9 +289,9 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| default | successful operation |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| default | successful operation  | string |
 
 ### /users/createWithArray
 ---
@@ -308,9 +308,9 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| default | successful operation |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| default | successful operation  | string |
 
 ### /users/createWithList
 ---
@@ -327,9 +327,9 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| default | successful operation |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| default | successful operation  | string |
 
 ### /users/login
 ---
@@ -347,10 +347,10 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | successful operation |
-| 400 | Invalid username/password supplied |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | successful operation  | string |
+| 400 | Invalid username/password supplied  | string |
 
 ### /users/logout
 ---
@@ -361,9 +361,9 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| default | successful operation |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| default | successful operation  | string |
 
 ### /users/{username}
 ---
@@ -380,11 +380,11 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | successful operation |
-| 400 | Invalid username supplied |
-| 404 | User not found |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | successful operation  | string |
+| 400 | Invalid username supplied  | string |
+| 404 | User not found  | string |
 
 ##### ***PUT***
 **Summary:** Updated user
@@ -400,10 +400,10 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 400 | Invalid user supplied |
-| 404 | User not found |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 400 | Invalid user supplied  | string |
+| 404 | User not found  | string |
 
 ##### ***DELETE***
 **Summary:** Delete user
@@ -418,7 +418,52 @@ apiteam@swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 400 | Invalid username supplied |
-| 404 | User not found |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 400 | Invalid username supplied  | string |
+| 404 | User not found  | string |
+
+### User
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| id | undefined | int64 | No | int64 |
+| username | undefined | string | No | undefined |
+| firstName | undefined | string | No | undefined |
+| lastName | undefined | string | No | undefined |
+| email | undefined | string | No | undefined |
+| password | undefined | string | No | undefined |
+| phone | undefined | string | No | undefined |
+| userStatus | User Status | int32 | No | int32 |
+### Category
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| id | undefined | int64 | No | int64 |
+| name | undefined | string | No | undefined |
+### Pet
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| id | undefined | int64 | No | int64 |
+| category | undefined | undefined | No | undefined |
+| name | undefined | string | No | undefined |
+| photoUrls | undefined | array | No | undefined |
+| tags | undefined | array | No | undefined |
+| status | pet status in the store | string | No | undefined |
+### Tag
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| id | undefined | int64 | No | int64 |
+| name | undefined | string | No | undefined |
+### Order
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| id | undefined | int64 | No | int64 |
+| petId | undefined | int64 | No | int64 |
+| quantity | undefined | int32 | No | int32 |
+| shipDate | undefined | date-time | No | date-time |
+| status | Order Status | string | No | undefined |
+| complete | undefined | boolean | No | undefined |

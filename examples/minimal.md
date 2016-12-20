@@ -8,6 +8,6 @@ Simple API
 ##### ***GET***
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |

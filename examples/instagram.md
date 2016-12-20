@@ -156,9 +156,9 @@ http://instagram.com/about/legal/terms/api
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | The user object |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | The user object  | string |
 
 **Security**
 
@@ -182,9 +182,9 @@ http://instagram.com/about/legal/terms/api
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /users/{user-id}/media/recent
 ---
@@ -202,9 +202,9 @@ http://instagram.com/about/legal/terms/api
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Get the most recent media published by a user. To get the most recent media published by the owner of the access token, you can use `self` instead of the `user-id`.  |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | Get the most recent media published by a user. To get the most recent media published by the owner of the access token, you can use `self` instead of the `user-id`.   | string |
 
 ### /users/self/media/liked
 ---
@@ -224,9 +224,9 @@ available for the currently authenticated user.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /users/search
 ---
@@ -242,9 +242,9 @@ available for the currently authenticated user.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /users/{user-id}/follows
 ---
@@ -259,9 +259,9 @@ available for the currently authenticated user.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /users/{user-id}/followed-by
 ---
@@ -276,9 +276,9 @@ available for the currently authenticated user.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /users/self/requested-by
 ---
@@ -288,9 +288,9 @@ available for the currently authenticated user.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /users/{user-id}/relationship
 ---
@@ -307,9 +307,9 @@ available for the currently authenticated user.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 **Security**
 
@@ -337,9 +337,9 @@ has liked this media item.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /media1/{shortcode}
 ---
@@ -359,9 +359,9 @@ Its corresponding shortcode is D.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /media/search
 ---
@@ -383,9 +383,9 @@ the last 5 days. Can return mix of image and video types.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /media/popular
 ---
@@ -396,9 +396,9 @@ Can return mix of image and video types.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /media/{media-id}/comments
 ---
@@ -414,9 +414,9 @@ Can return mix of image and video types.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ##### ***POST***
 **Description:** Create a comment on a media object with the following rules:
@@ -436,9 +436,9 @@ Can return mix of image and video types.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 **Security**
 
@@ -459,9 +459,9 @@ authored by the authenticated user.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /media/{media-id}/likes
 ---
@@ -477,9 +477,9 @@ authored by the authenticated user.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ##### ***POST***
 **Description:** Set a like on this media by the currently authenticated user.
@@ -492,9 +492,9 @@ authored by the authenticated user.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 **Security**
 
@@ -514,9 +514,9 @@ authored by the authenticated user.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /tags/{tag-name}
 ---
@@ -531,9 +531,9 @@ authored by the authenticated user.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /tags/{tag-name}/media/recent
 ---
@@ -551,9 +551,9 @@ these objects.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /tags/search
 ---
@@ -566,9 +566,9 @@ these objects.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /locations/{location-id}
 ---
@@ -583,9 +583,9 @@ these objects.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /locations/{location-id}/media/recent
 ---
@@ -604,9 +604,9 @@ these objects.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /locations/search
 ---
@@ -626,9 +626,9 @@ these objects.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
 
 ### /geographies/{geo-id}/media/recent
 ---
@@ -654,6 +654,80 @@ geography, use the [media search endpoint
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | OK  | string |
+
+### User
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| id |  | integer | No |
+| username |  | string | No |
+| full_name |  | string | No |
+| profile_picture |  | string | No |
+| bio |  | string | No |
+| website |  | string | No |
+| counts |  | object | No |
+### Media
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| created_time | Epoc time (ms) | integer | No |
+| type |  | string | No |
+| filter |  | string | No |
+| tags |  | Tag[] | No |
+| id |  | integer | No |
+| user |  | undefined | No |
+| users_in_photo |  | MiniProfile[] | No |
+| location |  | undefined | No |
+| comments: |  | object | No |
+| likes |  | object | No |
+| images |  | undefined | No |
+| videos |  | undefined | No |
+### Location
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| id |  | string | No |
+| name |  | string | No |
+| latitude |  | number | No |
+| longitude |  | number | No |
+### Comment
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| id |  | string | No |
+| created_time |  | string | No |
+| text |  | string | No |
+| from |  | undefined | No |
+### Like
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| user_name |  | string | No |
+| first_name |  | string | No |
+| last_name |  | string | No |
+| type |  | string | No |
+| id |  | string | No |
+### Tag
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| media_count |  | integer | No |
+| name |  | string | No |
+### Image
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| width |  | integer | No |
+| height |  | integer | No |
+| url |  | string | No |
+### MiniProfile
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| user_name |  | string | No |
+| full_name |  | string | No |
+| id |  | integer | No |
+| profile_picture |  | string | No |

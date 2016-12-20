@@ -28,10 +28,10 @@ foo@example.com
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | pet response |
-| default | unexpected error |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | pet response  | pet[] |
+| default | unexpected error  | string |
 
 ##### ***POST***
 **Description:** Creates a new pet in the store.  Duplicates are allowed
@@ -44,10 +44,10 @@ foo@example.com
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | pet response |
-| default | unexpected error |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | pet response  | string |
+| default | unexpected error  | string |
 
 ### /pets/{id}
 ---
@@ -62,10 +62,10 @@ foo@example.com
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | pet response |
-| default | unexpected error |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | pet response  | string |
+| default | unexpected error  | string |
 
 ##### ***DELETE***
 **Description:** deletes a single pet based on the ID supplied
@@ -78,7 +78,28 @@ foo@example.com
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 204 | pet deleted |
-| default | unexpected error |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 204 | pet deleted  | string |
+| default | unexpected error  | string |
+
+### pet
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| id |  | int64 | No |
+| name |  | string | No |
+| tag |  | string | No |
+### newPet
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| id |  | int64 | No |
+| name |  | string | No |
+| tag |  | string | No |
+### errorModel
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| code |  | int32 | No |
+| message |  | string | No |

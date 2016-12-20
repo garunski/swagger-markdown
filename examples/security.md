@@ -92,10 +92,10 @@ http://swagger.io
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | pet response |
-| default | error payload |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | pet response  | Pet[] |
+| default | error payload  | string |
 
 **Security**
 
@@ -103,3 +103,16 @@ http://swagger.io
 | --- | --- |
 | githubAccessCode | user |
 | internalApiKey | |
+
+### Pet
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| name |  | string | No |
+| tag |  | string | No |
+### ErrorModel
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| code |  | int32 | No |
+| message |  | string | No |

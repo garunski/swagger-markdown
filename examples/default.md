@@ -24,10 +24,10 @@ proper display order.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | An array of products |
-| default | Unexpected error |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | An array of products  | Product[] |
+| default | Unexpected error  | string |
 
 ### /estimates/price
 ---
@@ -55,10 +55,10 @@ already factors in this multiplier.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | An array of price estimates by product |
-| default | Unexpected error |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | An array of price estimates by product  | PriceEstimate[] |
+| default | Unexpected error  | string |
 
 ### /estimates/time
 ---
@@ -78,10 +78,10 @@ already factors in this multiplier.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | An array of products |
-| default | Unexpected error |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | An array of products  | Product[] |
+| default | Unexpected error  | string |
 
 ### /me
 ---
@@ -92,10 +92,10 @@ already factors in this multiplier.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Profile information for a user |
-| default | Unexpected error |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | Profile information for a user  | string |
+| default | Unexpected error  | string |
 
 ### /history
 ---
@@ -113,7 +113,57 @@ already factors in this multiplier.
 
 **Responses**
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | History information for the given user |
-| default | Unexpected error |
+| Code | Description | Type |
+| ---- | ----------- | ---- |
+| 200 | History information for the given user  | string |
+| default | Unexpected error  | string |
+
+### Product
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| product_id | Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles. | string | No |
+| description | Description of product. | string | No |
+| display_name | Display name of product. | string | No |
+| capacity | Capacity of product. For example, 4 people. | string | No |
+| image | Image URL representing the product. | string | No |
+### PriceEstimate
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| product_id | Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles | string | No |
+| currency_code | [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217) currency code. | string | No |
+| display_name | Display name of product. | string | No |
+| estimate | Formatted string of estimate in local currency of the start location. Estimate could be a range, a single number (flat rate) or "Metered" for TAXI. | string | No |
+| low_estimate | Lower bound of the estimated price. | number | No |
+| high_estimate | Upper bound of the estimated price. | number | No |
+| surge_multiplier | Expected surge multiplier. Surge is active if surge_multiplier is greater than 1. Price estimate already factors in the surge multiplier. | number | No |
+### Profile
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| first_name | First name of the Uber user. | string | No |
+| last_name | Last name of the Uber user. | string | No |
+| email | Email address of the Uber user | string | No |
+| picture | Image URL of the Uber user. | string | No |
+| promo_code | Promo code of the Uber user. | string | No |
+### Activity
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| uuid | Unique identifier for the activity | string | No |
+### Activities
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| offset | Position in pagination. | int32 | No |
+| limit | Number of items to retrieve (100 max). | int32 | No |
+| count | Total number of items available. | int32 | No |
+| history |  | Activity[] | No |
+### Error
+---
+| Name | Description | Type | Required |
+| ---- | ----------- | ---- | -------- |
+| code |  | int32 | No |
+| message |  | string | No |
+| fields |  | string | No |
