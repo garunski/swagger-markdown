@@ -5,9 +5,13 @@ function getFormat(val) {
   }
 
   if (val.type === 'array') {
-    const name = val.items.$ref.substring(14, val.items.$ref.length);
-    const type = `${name}[]`;
-    return type;
+    let name = '[]';
+    if (val.items && val.items.$ref) {
+      name = val.items.$ref.substring(14, val.items.$ref.length);
+      name = `${name}[]`;
+    }
+
+    return name;
   }
 
   return val.type;
@@ -27,7 +31,7 @@ function getRequired(val) {
 module.exports = (definition, data) => {
   const res = [];
   let defProps = null;
-  if (definition && data) {
+  if (definition && data && data.type === 'object') {
     res.push(`### ${definition}`);
     res.push('---');
 
@@ -39,7 +43,6 @@ module.exports = (definition, data) => {
 
     Object.keys(data.properties).map(prop => {
       const propString = `| ${prop} | ${getDescription(defProps[prop])} | ${getFormat(defProps[prop])} | ${getRequired(defProps[prop])} |`;
-
       res.push(propString);
     });
   }
